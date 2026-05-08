@@ -1,0 +1,221 @@
+/* ============================================================
+   GLOBAL.CSS  —  Variables, Reset, Base
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --gold:       #C9A84C;
+  --gold-light: #E2C97E;
+  --gold-dark:  #9B7D35;
+  --dark:       #0A0A0A;
+  --dark-2:     #141414;
+  --dark-3:     #1E1E1E;
+  --white:      #FFFFFF;
+  --muted:      #888888;
+  --border:     #EEEEEE;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans:  'Montserrat', sans-serif;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+/* ── Shared Section Utility ── */
+.section {
+  padding: 68px 56px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* ── Toast Notification ── */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--gold);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 13px 30px;
+  border-radius: 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 9999;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Modal Styles ── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--dark);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.listing-preview {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--dark-3);
+  border-radius: 8px;
+  color: var(--white);
+}
+
+.listing-preview img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.listing-preview .price {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content .form-group input,
+.modal-content .form-group textarea,
+.modal-content .form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+
+.modal-content .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-content .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content .submit-btn:hover {
+  background: var(--gold-dark);
+}
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 960px) {
+  .section {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  .section {
+    padding: 36px 16px;
+  }
+}

@@ -1,0 +1,148 @@
+nav.site-nav {
+  z-index: 999;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.nav-top {
+  border-bottom: 1px solid #f2f2f2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 56px;
+  display: flex;
+}
+
+.nav-email {
+  color: var(--muted);
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  display: flex;
+}
+
+.nav-logo {
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  display: flex;
+}
+
+.nav-logo-icon {
+  background: var(--gold);
+  color: #fff;
+  letter-spacing: .5px;
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.nav-logo-text {
+  font-family: var(--font-sans);
+  color: var(--dark);
+  letter-spacing: 1.5px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.nav-logo-text span {
+  color: var(--gold);
+}
+
+.nav-search {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  align-items: center;
+  height: 36px;
+  display: flex;
+  overflow: hidden;
+}
+
+.nav-search input {
+  font-family: var(--font-sans);
+  width: 210px;
+  color: var(--dark);
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.nav-search button {
+  background: var(--gold);
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  height: 100%;
+  padding: 0 14px;
+  font-size: 16px;
+  transition: background .2s;
+}
+
+.nav-search button:hover {
+  background: var(--gold-dark);
+}
+
+.nav-links {
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  padding: 13px 56px;
+  display: flex;
+}
+
+.nav-links a {
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+  position: relative;
+}
+
+.nav-links a:after {
+  content: "";
+  background: var(--gold);
+  width: 0;
+  height: 1.5px;
+  transition: width .25s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-links a:hover:after {
+  width: 100%;
+}
+
+@media (width <= 960px) {
+  .nav-top {
+    padding: 10px 24px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 12px 24px;
+  }
+}
+
+@media (width <= 620px) {
+  .nav-search input {
+    width: 120px;
+  }
+}
+/*# sourceMappingURL=zipclaude.13ccf6ed.css.map */

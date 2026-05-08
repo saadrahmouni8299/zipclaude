@@ -1,0 +1,126 @@
+/* ============================================================
+   FOOTER.CSS
+   ============================================================ */
+
+.site-footer {
+  background: var(--dark);
+  padding: 52px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gold);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 13px;
+  font-family: var(--font-sans);
+}
+
+.footer-logo-text {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.footer-logo-text span {
+  color: var(--gold);
+}
+
+/* Description */
+.footer-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.75;
+  max-width: 320px;
+  margin-bottom: 22px;
+}
+
+/* Socials */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.footer-social:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: var(--dark);
+  padding: 15px 56px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom a {
+  font-size: 11px;
+  color: var(--gold);
+  text-decoration: none;
+  margin-left: 18px;
+  transition: opacity 0.2s;
+}
+
+.footer-bottom a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .site-footer {
+    padding: 40px 24px;
+    flex-direction: column;
+  }
+  .footer-bottom {
+    padding: 14px 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+}

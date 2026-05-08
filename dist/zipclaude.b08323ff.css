@@ -1,0 +1,119 @@
+.site-footer {
+  background: var(--dark);
+  border-top: 1px solid #ffffff0f;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 52px 56px;
+  display: flex;
+}
+
+.footer-logo {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.footer-logo-icon {
+  background: var(--gold);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.footer-logo-text {
+  font-family: var(--font-sans);
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-logo-text span {
+  color: var(--gold);
+}
+
+.footer-desc {
+  color: #ffffff73;
+  max-width: 320px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.footer-socials {
+  gap: 14px;
+  display: flex;
+}
+
+.footer-social {
+  color: #ffffff8c;
+  border: 1px solid #ffffff2e;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color .2s, color .2s;
+  display: flex;
+}
+
+.footer-social:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.footer-bottom {
+  background: var(--dark);
+  border-top: 1px solid #ffffff0d;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 56px;
+  display: flex;
+}
+
+.footer-bottom p {
+  color: #ffffff4d;
+  font-size: 11px;
+}
+
+.footer-bottom a {
+  color: var(--gold);
+  margin-left: 18px;
+  font-size: 11px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.footer-bottom a:hover {
+  opacity: .75;
+  text-decoration: underline;
+}
+
+@media (width <= 960px) {
+  .site-footer {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 24px;
+  }
+}
+/*# sourceMappingURL=zipclaude.b08323ff.css.map */

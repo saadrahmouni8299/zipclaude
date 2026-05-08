@@ -1,0 +1,102 @@
+/* ============================================================
+   SLIDER.CSS
+   ============================================================ */
+
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  background: #000;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.75s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.82;
+  display: block;
+}
+
+/* Big text overlays */
+.slide-label {
+  position: absolute;
+  font-family: var(--font-serif);
+  font-size: clamp(52px, 8.5vw, 106px);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 10px;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  animation: labelFade 0.7s ease both;
+}
+
+.slide-label.tl { top: 40px;    left: 52px;  }
+.slide-label.br { bottom: 40px; right: 52px; }
+
+@keyframes labelFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Prev / Next buttons */
+.sl-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.sl-btn:hover { background: var(--gold); }
+.sl-btn.prev  { left:  22px; }
+.sl-btn.next  { right: 22px; }
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.dot.active {
+  background: var(--gold);
+  transform: scale(1.35);
+}

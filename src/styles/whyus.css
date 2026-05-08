@@ -1,0 +1,112 @@
+/* ============================================================
+   WHYUS.CSS
+   ============================================================ */
+
+.why-section {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 56px;
+  background: var(--dark);
+  text-align: center;
+}
+
+.why-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1600&q=80')
+    center / cover no-repeat;
+  opacity: 0.22;
+}
+
+.why-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.why-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.why-title {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 5.5vw, 66px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.why-title span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.why-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 52px;
+  font-weight: 300;
+}
+
+/* Cards grid */
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 38px 24px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.why-card:hover {
+  background: rgba(201, 168, 76, 0.16);
+  transform: translateY(-5px);
+}
+
+.why-card-icon {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.why-card-title {
+  font-family: var(--font-serif);
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.why-card-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .why-section {
+    padding: 68px 24px;
+  }
+  .why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+}

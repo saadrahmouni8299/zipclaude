@@ -1,0 +1,40 @@
+.hero {
+  text-align: center;
+  padding: 56px 20px 0;
+}
+
+.hero-badge {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  padding: 5px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  color: var(--dark);
+  margin-bottom: 6px;
+  font-size: clamp(44px, 6vw, 78px);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero p {
+  color: #555;
+  max-width: 480px;
+  margin: 20px auto 48px;
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+/*# sourceMappingURL=zipclaude.f6d87ae5.css.map */

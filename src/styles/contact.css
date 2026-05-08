@@ -1,0 +1,111 @@
+/* ============================================================
+   CONTACT.CSS
+   ============================================================ */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+/* Left — form panel */
+.contact-left {
+  background: var(--dark-2);
+  padding: 68px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 34px;
+  line-height: 1.2;
+}
+
+.contact-title span {
+  color: var(--gold);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.form-group textarea {
+  resize: none;
+  height: 108px;
+}
+
+.submit-btn {
+  background: var(--gold);
+  border: none;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 38px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+}
+
+/* Right — map */
+.contact-right {
+  position: relative;
+  background: #e8e8e8;
+}
+
+.contact-right iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+  .contact-left {
+    padding: 52px 24px;
+  }
+  .contact-right {
+    min-height: 320px;
+  }
+}
